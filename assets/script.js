@@ -35,7 +35,27 @@ function generatePassword() {
   }
 
   if (confirmNumbers && confirmSpecial && confirmLower && confirmUpper) {
-
+    picked = numbers.concat(special, lowerCase, upperCase);
+  } else if (confirmNumbers && confirmSpecial && confirmLower) {
+    picked = numbers.concat(special, lowerCase);
+  } else if (confirmNumbers && confirmLower && confirmUpper) {
+    picked = numbers.concat(lowerCase, upperCase);
+  } else if (confirmNumbers && confirmSpecial && confirmUpper) {
+    picked = numbers.concat(special, upperCase);
+  } else if (confirmSpecial && confirmLower && confirmUpper) {
+    picked = special.concat(lowerCase, upperCase);
+  } else if (confirmNumbers && confirmSpecial) {
+    picked = numbers.concat(special);
+  } else if (confirmNumbers && confirmLower) {
+    picked = numbers.concat(lowerCase);
+  } else if (confirmNumbers && confirmUpper) {
+    picked = numbers.concat(upperCase);
+  } else if (confirmSpecial && confirmLower) {
+    picked = special.concat(lowerCase);
+  } else if (confirmSpecial && confirmUpper) {
+    picked = special.concat(upperCase);
+  } else if (confirmLower && confirmUpper) {
+    picked = lowerCase.concat(upperCase)
   }
 }
 // Write password to the #password input
