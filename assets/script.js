@@ -21,9 +21,19 @@ function generatePassword() {
   
   alert("This password will have " + confirmLength + " characters.");
 
-  
-}
+  var confirmNumber = confirm("Please click OK to confirm if you would like to use numbers");
+  var confirmSpecial = confirm("Please click OK to confirm if you would like to use special characters");
+  var confirmLower = confirm("Please click OK to confirm if you would like to use lowercase");
+  var confirmUpper = confirm("Please click OK to confirm if you would like to use uppercase");
 
+  while(confirmNumber === false && confirmSpecial === false && confirmLower === false && confirmUpper === false) {
+    alert("One option must be selected");
+    var confirmNumber = confirm("Please click OK to confirm if you would like to use numbers");
+    var confirmSpecial = confirm("Please click OK to confirm if you would like to use special characters");
+    var confirmLower = confirm("Please click OK to confirm if you would like to use lowercase");
+    var confirmUpper = confirm("Please click OK to confirm if you would like to use uppercase");
+  }
+}
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
