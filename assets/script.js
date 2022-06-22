@@ -32,7 +32,7 @@ function generatePassword() {
       confirmSpecial = confirm("Please click OK to confirm if you would like to use special characters");
       confirmLower = confirm("Please click OK to confirm if you would like to use lowercase");
       confirmUpper = confirm("Please click OK to confirm if you would like to use uppercase");
-  }
+  };
 
   if (confirmNumbers && confirmSpecial && confirmLower && confirmUpper) {
     picked = numbers.concat(special, lowerCase, upperCase);
@@ -56,12 +56,21 @@ function generatePassword() {
     picked = special.concat(upperCase);
   } else if (confirmLower && confirmUpper) {
     picked = lowerCase.concat(upperCase)
-  }
+  } else if (confirmNumbers) {
+    picked = numbers;
+  } else if (confirmSpecial) {
+    picked = special;
+  } else if (confirmLower) {
+    picked = lowerCase
+  } else if (confirmUpper) {
+    picked = upperCase;
+  };
 }
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  document.getElementById("password").placeholder = password;
 
   passwordText.value = password;
 
@@ -70,7 +79,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-generateBtn.addEventListener("click", function () {
-  pass = generatePassword();
-  document.getElementById("password").placeholer = pass;
-});
+generateBtn.addEventListener("click", generatePassword);
