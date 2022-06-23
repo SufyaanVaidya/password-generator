@@ -17,9 +17,9 @@ function generatePassword() {
 
   if (confirmLength <= 7 || confirmLength >= 129) {
     alert("please make sure password length fits critirea of 8-128, try again.");
-    var confirmLength = (prompt("How long would you like this password?(8-128)"));
+    var confirmLength = (prompt("What length would you like this password?(8-128)"));
   }
-  alert("This password will have " + confirmLength + " characters.");
+  alert("Your password will have " + confirmLength + " characters.");
   
   
   confirmNumbers = confirm("Please click OK to confirm if you would like to use numbers");
@@ -29,7 +29,7 @@ function generatePassword() {
   
 
   if (confirmNumbers === false && confirmSpecial === false && confirmLower === false && confirmUpper === false) {
-    alert("One option must be selected");
+    alert("One option must be selected, to generate your password.");
       confirmNumbers = confirm("Please click OK to confirm if you would like to use numbers");
       confirmSpecial = confirm("Please click OK to confirm if you would like to use special characters");
       confirmLower = confirm("Please click OK to confirm if you would like to use lowercase");
