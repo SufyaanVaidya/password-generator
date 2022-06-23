@@ -12,10 +12,24 @@ var confirmSpecial;
 var confirmLower;
 var confirmUpper;
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+ 
+
+  passwordText.value = password;
+}
+
+
+// Add event listener to generate button
+ generateBtn.addEventListener("click", writePassword);
+ 
+
 function generatePassword() {
   var confirmLength = (prompt("How long would you like this password?(8-128 characters.)"));
 
-  if (confirmLength <= 7 || confirmLength >= 129) {
+  while (confirmLength <= 7 || confirmLength >= 129) {
     alert("please make sure password length fits critirea of 8-128, try again.");
     var confirmLength = (prompt("What length would you like this password?(8-128)"));
   }
@@ -28,7 +42,7 @@ function generatePassword() {
   confirmUpper = confirm("Please click OK to confirm if you would like to use uppercase");
   
 
-  if (confirmNumbers === false && confirmSpecial === false && confirmLower === false && confirmUpper === false) {
+  while (confirmNumbers === false && confirmSpecial === false && confirmLower === false && confirmUpper === false) {
     alert("One option must be selected, to generate your password.");
       confirmNumbers = confirm("Please click OK to confirm if you would like to use numbers");
       confirmSpecial = confirm("Please click OK to confirm if you would like to use special characters");
@@ -61,15 +75,3 @@ function generatePassword() {
   }
   return newPassword;
 }
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
- 
-
-  passwordText.value = password;
-}
-
-
-// Add event listener to generate button
- generateBtn.addEventListener("click", writePassword);
