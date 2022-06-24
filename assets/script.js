@@ -65,13 +65,12 @@ function generatePassword() {
     charpassword = charpassword.concat(upperCase)
   }
 
-  console.log(charpassword)
 
   var newPassword = ""
 
   for (var i = 0; i < confirmLength; i++) {
     newPassword = newPassword + charpassword[Math.floor(Math.random() * charpassword.length)];
-    console.log(newPassword)
+
   }
   return newPassword;
 }
