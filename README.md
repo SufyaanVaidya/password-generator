@@ -4,7 +4,7 @@
 
 This project is is a random password generator, that when generate password is clicked a line of code will randomly select options of the user choice and create a password. First you will be greeted by prompts after clicking generate password with a specific set of criteria for the password that must be met for it to be generated. If criteria is not met you will be prompted untill they are met. After selecting you specialized password criteria, you will be greeted with a random password from your chosen characters inside the textbox on the page. This generator will generate any amount of passwords the user will like, each different from the last.
 
-[Deployable-Link] (https://sufyaanvaidya.github.io/password-generator/)
+[Deployable-Link](https://sufyaanvaidya.github.io/password-generator/)
 
 ## Installation
 
@@ -30,7 +30,7 @@ This project is is a random password generator, that when generate password is c
 - When all the prompts are answered you will receive a generated password inside the text area that you
     may copy and use, or generate a new password by folowing the steps.
 
-![](./assets/Password%20Generator.gif)
+![](./assets/password-generator.gif)
 
 
 
