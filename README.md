@@ -12,22 +12,25 @@ This project is is a random password generator, that when generate password is c
 2. After the repo was created i copied over the given starter to my own repository via git bash.
 3. With the starter files added i pushed them to the repo.
 4. Once on the repo i began editing the Javascript file.
-5. Once the structure was made i added titles, links, headers, and p tags to create its base.
-6. When the base was there i gave each element that needed to be targeted a class or an id.
-7. On css with the tags and their classes/id's i began to target and style each tag.
-8. After the tags were styled i made everything line up in the correct order i wanted.
-9. When in order i made the nav links travel through the page.
-10. Once the pages were finished i added a self picture and moved it to line up with the center.
+5. With the starter code i was given the event listener and the code for it to appear on the page but
+    will not generate or appear any prompts so first i added prompts asking how and what the password
+    will consist of, i did this by adding propt fuctions and alerts to the js file.
+6. I also added alerts for if the password doesnt meet the criteria that it will loop
+    until it is met.
+7. Once or if all cirteria are met the password will be generated from the selected options,
+    and appear in the text area in the center of the page.
 
 ## Usage 
 
-- Clicking "bio" will direct you lower in the page to my biography section.
+- Clicking the "generate password" button will begin the criteria prompts
 
-- Clicking "projects" will direct you further down on the page to the list of projects i have worked on.
+- inputting the wrong character amount or not using any of the options to pick what the password consists of,
+    you will be repeatedly asked to follow the requirements for the password.
 
-- Clicking "contact info" will direct you to the bottom of the page to the different form of contacting me.
+- When all the prompts are answered you will receive a generated password inside the text area that you
+    may copy and use, or generate a new password by folowing the steps.
 
-![](./assets/images/Sufyaan's%20portfolio.gif)
+![](./assets/Password%20Generator.gif)
 
 
 
@@ -36,10 +39,13 @@ This project is is a random password generator, that when generate password is c
 
 - Sufyaan Vaidya (https://github.com/SufyaanVaidya)
 - (https://www.w3schools.com/)
+- (https://www.techiedelight.com/)
+- (https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- (https://github.com/SufyaanVaidya/password-generator.git)
 
 
 
 ## License
 
 - This website has an MIT license 
-- (https://github.com/SufyaanVaidya/my-portfolio/blob/330eb6f89b0fdfadab58da23b8c37a80936f099c/LICENSE)
+- (https://github.com/SufyaanVaidya/password-generator.git)
